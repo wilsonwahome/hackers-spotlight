@@ -1,0 +1,53 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    margin-right: 20px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style the SearchBar */
+  .SearchBar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .SearchBar input {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  .SearchBar button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .SearchBar button:hover {
+    background-color: #0056b3;
+  }
+  

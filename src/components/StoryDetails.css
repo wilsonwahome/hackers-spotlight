@@ -1,0 +1,13 @@
+.story-details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.story-details h1 {
+  margin-top: 0;
+}
+
+.story-details p {
+  margin: 10px 0;
+}

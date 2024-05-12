@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import './StoryList.css'; // Import the CSS file for styling
 
 function StoryList() {
   const [stories, setStories] = useState([]);
@@ -11,20 +12,18 @@ function StoryList() {
   }, []);
 
   return (
-    <div>
+    <div className="story-list">
       <h1>Top Stories</h1>
-      <ul>
+      <div className="cards">
         {stories.map(storyId => (
-          <li key={storyId}>
-            <StoryLink storyId={storyId} />
-          </li>
+          <StoryCard key={storyId} storyId={storyId} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
 
-function StoryLink({ storyId }) {
+function StoryCard({ storyId }) {
   const [story, setStory] = useState({});
 
   useEffect(() => {
@@ -34,7 +33,12 @@ function StoryLink({ storyId }) {
   }, [storyId]);
 
   return (
-    <Link to={`/story/${storyId}`}>{story.title}</Link>
+    <div className="card">
+      <h2><Link to={`/story/${storyId}`}>{story.title}</Link></h2>
+      <p>Author: {story.by}</p>
+      <p>Score: {story.score}</p>
+      <p>URL: <a href={story.url}>{story.url}</a></p>
+    </div>
   );
 }
 
